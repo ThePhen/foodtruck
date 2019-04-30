@@ -2,6 +2,13 @@ require('dotenv').config(); // incorporate a ./.env file, if present
 
 const dumpUsage = require('./lib/cli-usage');
 
+const SHOW_HELP = process.env.HELP;
+
+if (SHOW_HELP) {
+    dumpUsage();
+    process.exit(-1);
+}
+
 const CURR_LONGITUDE = process.env.CURR_LONGITUDE;
 const CURR_LATITUDE = process.env.CURR_LATITUDE;
 

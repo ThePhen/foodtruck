@@ -1,10 +1,13 @@
 require('dotenv').config(); // incorporate a ./.env file, if present
 
+const dumpUsage = require('./lib/cli-usage');
+
 const CURR_LONGITUDE = process.env.CURR_LONGITUDE;
 const CURR_LATITUDE = process.env.CURR_LATITUDE;
 
 if (!CURR_LATITUDE || !CURR_LONGITUDE) {
-    console.error("Environment variables 'CURR_LATITUDE' and 'CURR_LONGITUDE' must be set. One is not. Set both and try again.")
+    console.error("Environment variables 'CURR_LATITUDE' and 'CURR_LONGITUDE' must be set. One is not. Set both and try again.");
+    dumpUsage();
     process.exit(-1);
 }
 

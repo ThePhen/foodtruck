@@ -1,0 +1,17 @@
+{
+  "name": "foodtruck",
+  "version": "1.0.0",
+  "description": "",
+  "main": "lib/local-data/index.js",
+  "scripts": {
+    "start": "node foodtruck.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "csv-parser": "^2.2.0",
+    "d3": "^5.9.2",
+    "dotenv": "^7.0.0"
+  }
+}
